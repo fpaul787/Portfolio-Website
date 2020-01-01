@@ -142,3 +142,31 @@
 		transition-delay: $x * 0.1s; // each one will come in separatly
 	}
 }
+
+// Media Query Mixins
+@mixin mediaSm {
+	@media screen and (max-width: 500px) {
+		// Any css that we put in here
+		// will apply for screens that
+		// 500px max or less
+		@content;
+	}
+}
+
+@mixin mediaMd {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin mediaLg {
+	@media screen and (min-width: 769px) and (max-width: 1170px) {
+		@content;
+	}
+}
+
+@mixin mediaXl {
+	@media screen and (min-width: 1171px) {
+		@content;
+	}
+}
