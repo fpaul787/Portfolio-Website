@@ -2,17 +2,17 @@
 @import 'menu';
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	@include background;
-	background: $primary-color;
-	color: set-text-color($primary-color);
-	height: 100%;
-	margin: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	line-height: 1.5;
+    @include background;
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
 }
 
 // Headings
@@ -22,191 +22,191 @@ body {
 h1,
 h2,
 h3 {
-	margin: 0;
-	font-weight: 400;
+    margin: 0;
+    font-weight: 400;
 
-	&.lg-heading {
-		font-size: 6rem;
-	}
+    &.lg-heading {
+        font-size: 6rem;
+    }
 
-	// for description heading background
-	&.sm-heading {
-		margin-bottom: 2rem;
-		padding: 0.2rem 1rem;
-		// for out image
-		background: rgba(lighten($primary-color, 2), 0.5);
-	}
+    // for description heading background
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        // for out image
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
 }
 
 // links
 // text-decoration: none gets rid of underlines
 a {
-	color: #fff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 // header
 // header fixed makes header stay at top
 // z-index is how close to you an element is
 header {
-	position: fixed;
-	z-index: 2;
-	width: 100%;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .text-secondary {
-	color: $secondary-color;
+    color: $secondary-color;
 }
 
 main {
-	padding: 4rem;
-	//height: 100%;
+    padding: 4rem;
+    //height: 100%;
 
-	// for sticker footer
-	min-height: calc(100vh - 60px);
+    // for sticker footer
+    min-height: calc(100vh - 60px);
 
-	// style icons
-	// padding between them
-	// and hover
-	.icons {
-		margin-top: 1rem; // push them down
+    // style icons
+    // padding between them
+    // and hover
+    .icons {
+        margin-top: 1rem; // push them down
 
-		a {
-			padding: 0.4rem;
+        a {
+            padding: 0.4rem;
 
-			&:hover {
-				color: $secondary-color;
-				@include easeOut();
-			}
-		}
-	}
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
 
-	// any main that has id home
-	&#home {
-		overflow: hidden; // no scrollbars
-		h1 {
-			// vh is viewport height
-			// 20 slices of height
-			// there is also vw
-			margin-top: 20vh;
-		}
-	}
+    // any main that has id home
+    &#home {
+        overflow: hidden; // no scrollbars
+        h1 {
+            // vh is viewport height
+            // 20 slices of height
+            // there is also vw
+            margin-top: 20vh;
+        }
+    }
 }
 
 .about-info {
-	display: grid;
-	grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-	// With CSS Grid Layout, we get a new flexible unit: the Fr unit.
-	// Fr is a fractional unit and 1fr is for 1 part of the available space
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
+    display: grid;
+    grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+    // With CSS Grid Layout, we get a new flexible unit: the Fr unit.
+    // Fr is a fractional unit and 1fr is for 1 part of the available space
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 
-	.bio-image {
-		grid-area: bioimage;
-		margin: auto;
-		border-radius: 50%;
-		border: $secondary-color 3px solid;
-	}
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
 
-	.bio {
-		grid-area: bio;
-		font-size: 1.5rem;
-	}
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
 
-	.job-1 {
-		grid-area: job1;
-	}
-	.job-2 {
-		grid-area: job2;
-	}
-	.job-3 {
-		grid-area: job3;
-	}
+    .job-1 {
+        grid-area: job1;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job-3 {
+        grid-area: job3;
+    }
 
-	.job {
-		background: lighten($primary-color, 5);
-		padding: 0.5rem;
-		border-bottom: $secondary-color 5px solid;
-	}
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
 }
 
 // Work/Projects
 .projects {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-	// rem are relative units
-	grid-gap: 0.7rem;
-	img {
-		width: 100%;
-		border: 3px #fff solid;
+    // rem are relative units
+    grid-gap: 0.7rem;
+    img {
+        width: 100%;
+        border: 3px #fff solid;
 
-		&:hover {
-			opacity: 0.5;
-			border-color: $secondary-color;
-			@include easeOut;
-		}
-	}
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
 }
 
 // Button Syles
 // Some inheritance?
 .btn {
-	display: block;
-	padding: 0.5rem 1rem;
-	border: 0;
-	margin-bottom: 0.3rem;
-	&:hover {
-		background: $secondary-color;
-		color: set-text-color($secondary-color);
-	}
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
 }
 
 // Contact Page
 .boxes {
-	display: flex;
-	flex-wrap: wrap; // when too big, go to next line
-	justify-content: space-evenly;
-	align-items: center;
-	margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap; // when too big, go to next line
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
 
-	div {
-		font-size: 2rem;
-		border: 3px #fff solid;
-		padding: 1.5rem 2.5rem;
-		margin-bottom: 3rem;
-		@include easeOut;
+    div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
 
-		&:hover {
-			// padding changes on hover
-			padding: 0.5rem 1.5rem;
-			background: $secondary-color;
-			color: set-text-color($secondary-color);
-			span {
-				color: set-text-color($secondary-color);
-			}
-		}
-	}
+        &:hover {
+            // padding changes on hover
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
 }
 
 // extend class
 .btn-dark {
-	@extend .btn;
-	background: darken($primary-color, 50);
-	color: #fff;
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
 }
 
 .btn-light {
-	@extend .btn;
-	background: lighten($primary-color, 50);
-	color: #333;
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
 }
 
 #main-footer {
-	text-align: center;
-	padding: 1rem;
-	background: darken($primary-color, 10);
-	color: set-text-color($primary-color);
-	height: 60px;
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
 }
 @import 'mobile';

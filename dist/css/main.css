@@ -53,11 +53,11 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 350px;
+      width: 400px;
       height: 400px;
       background: url("../img/portrait_menu.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 5px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 1.0s ease-out; }
