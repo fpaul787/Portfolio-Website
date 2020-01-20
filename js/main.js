@@ -29,7 +29,7 @@ function toggleMenu() {
         showMenu = true
     } else {
         // If menu is closed
-        // adding close class
+        // removing close class
         menuBtn.classList.remove('close')
 
         menu.classList.remove('show')
